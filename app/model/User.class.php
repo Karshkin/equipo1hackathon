@@ -47,6 +47,7 @@ class User extends Database {
 		}
 	}
 
+	/*
 	public function activateUser($activationCode, $userID) {
 		if(mysqli_num_rows($this->query("SELECT userId, activeCode FROM user_emailconfirm WHERE userId='".$userID."' and activeCode='".$activationCode."';")) == 1) {
 				if($this->query("UPDATE user_emailconfirm SET confirmed=1 WHERE userId='".$userID."' and activeCode='".$activationCode."';")) {
@@ -57,6 +58,7 @@ class User extends Database {
 			return false;
 		}
 	}
+	*/
 }
 
 ?>

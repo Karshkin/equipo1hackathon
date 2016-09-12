@@ -25,7 +25,7 @@ if(isset($_SESSION["username"])) {
 		<nav class = "menu">
 			<ul>
 				<li><a href="index.php">App icon</a></li>
-				<li<?php echo (false ? ' class = "activeTab"' : ""); ?>><a href="?page=insertStory"><?php echo $lang["insertStoryPage"]; ?></a></li>
+				<li<?php echo (false ? ' class = "activeTab"' : ""); ?>><a href="?page=insertStory"><?php echo $lang["element1"]; ?></a></li>
 				<li<?php echo (false ? ' class = "activeTab"' : ""); ?>><a href="#"><?php echo $lang["element2"]; ?></a></li>
 				<li<?php echo ' class = "userMenu'.((isset($_GET["page"])) && (($_GET["page"] == "login") || ($_GET["page"] == "profile")) ? ' activeTab"' : '"'); ?>><?php echo $userNav; ?><li>
 			</ul>

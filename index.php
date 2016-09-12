@@ -1,9 +1,8 @@
 <?php
 session_start();
-define("APP_NAME", "Tell Yourself");
+define("APP_NAME", "FlatPHP");
 require_once("app/controller/mainController.php");
 require_once("app/controller/usersController.php");
-require_once("app/controller/storiesController.php");
 
 if(!empty($_GET)) {
 	if(isset($_GET["action"])) {
@@ -16,12 +15,6 @@ if(!empty($_GET)) {
 				break;
 			case "logout":
 				userLogout();
-				break;
-			case "activeUser":
-				userActivate();
-				break;
-			case "insertStory":
-				insertStory();
 				break;
 			default:
 				//
@@ -36,15 +29,6 @@ if(!empty($_GET)) {
 				break;
 			case "register":
 				include_once("app/view/".$theme."/pages/register.php");
-				break;
-			case "profile":
-				include_once("app/view/".$theme."/pages/profile.php");
-				break;
-			case "story":
-				include_once("app/view/".$theme."/pages/story.php");
-				break;
-			case "insertStory":
-				include_once("app/view/".$theme."/pages/insertStory.php");
 				break;
 			default:
 				include_once("app/view/".$theme."/pages/404.php");
