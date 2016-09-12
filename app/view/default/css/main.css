@@ -1,0 +1,192 @@
+:root {
+	--mainColor: #00B3B3;
+	--secondColor: #008888;
+	--thirdColor: #006A6A;
+}
+
+/**********BODY**********/
+
+body {
+	margin: 0;
+	background-color: var(--secondColor);
+}
+
+/**********NAVIGATION BAR**********/
+
+.menu {
+	width: 100%;
+	height: auto;
+	background-color: var(--mainColor);
+	font-family: 'Raleway', sans-serif;
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.menu ul li {
+	display: inline-block;
+	position: relative;
+	padding: 15px 0 15px 0;
+	cursor: pointer;
+	color: white;
+}
+
+.menu ul li a {
+    color: white;
+    text-align: center;
+	padding: 14px 16px;
+    text-decoration: none;
+   	font-size:1em;
+}
+
+.menu ul li:hover {
+	background: var(--secondColor);
+}
+
+.menu ul li ul {
+	z-index: 2;
+	padding: 0;
+	position: absolute;
+	top: 48px;
+	right: 0;
+	width: 150px;
+	box-shadow: none;
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.menu ul li ul li {
+	background: var(--secondColor);
+	display: block;
+	text-shadow: 0 -1px 0 #000;
+}
+
+.menu ul li ul li:hover {
+	background: var(--thirdColor);
+}
+
+.menu ul li:hover ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+.userMenu {
+	float: right;
+}
+
+.activeTab {
+	background-color: var(--secondColor);
+}
+
+/**********CONTAINER**********/
+
+.pageContainer {
+	margin: 2% 0 3% 0;
+}
+
+/**********LOGIN FORM**********/
+
+.loginRegisterForm {
+	width: 22%;
+	border: 4px solid var(--mainColor);
+	background-color: var(--secondColor);
+	padding: 2% 2% 0 2%;
+	margin: 0 auto;
+}
+
+.loginRegisterForm * {
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+/**********STORY PAGE**********/
+.story {
+	margin: 0 2% 0 2%;
+	overflow: hidden;
+	position: relative;
+}
+
+.storyText {
+	width: 70%;
+	border: 2px solid var(--mainColor);
+	background-color: var(--secondColor);
+	float: left;
+}
+
+.navButtons {
+	margin: 0 auto;
+}
+
+#readMore {
+	width: 100%;
+}
+
+.storyNav {
+	width: 27%;
+	float: right;
+	border: 2px solid var(--mainColor);
+}
+
+.authorInfo {}
+
+.floatOptions {}
+
+.storyOptions {}
+
+/**********FOOTER**********/
+
+.footer {
+	clear: both;
+	text-align: center;
+	width:100%;
+	left:0;
+	background-color: var(--mainColor);
+}
+
+/**********INSERT STORY FORM**********/
+
+.insertStoryForm {
+	margin: 0 auto;
+	width: 55%;
+}
+
+.insertStoryForm div {
+	text-align: center;
+}
+
+.textEdit {
+	resize: none;
+	width: 90%;
+	height: 70vh;
+}
+
+//jej
+
+.decisionBox {
+	width: 30%;
+}
+
+.decisionTabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.decisionTabs li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.decision {
+	display: none;
+	border: 1px solid;
+}
