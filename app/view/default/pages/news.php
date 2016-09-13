@@ -1,10 +1,10 @@
 <?php
-$pageTitle = "Story name";
+$pageTitle = "Noticia";
 include_once("app/view/default/includes/header.php");
 ?>
 
-<div class = "story">
-	<div class = "storyText">
+<div class = "news">
+	<div class = "newsText">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas ex nisl, eu accumsan sapien condimentum in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam viverra accumsan ligula. Suspendisse non commodo felis, porta facilisis massa. Curabitur ullamcorper felis non quam egestas ullamcorper. Aliquam erat volutpat. Sed malesuada, nunc ac lobortis finibus, lectus massa malesuada turpis, quis lacinia neque lacus vel velit. Nam posuere mauris et eleifend egestas. Etiam mattis eu eros at volutpat. Duis sapien libero, lobortis sit amet tempor non, gravida et erat. Ut ut urna quis nibh mollis auctor at id diam. Aliquam erat volutpat. Curabitur feugiat in velit eget tempor. Cras velit enim, cursus ut laoreet sollicitudin, commodo nec arcu. Nullam accumsan felis neque, vel pretium velit varius sed. Suspendisse dapibus posuere neque, sit amet auctor metus placerat eu.
 
 		Nam at porta urna, vitae iaculis dui. Nam ipsum nibh, elementum ut cursus at, facilisis in arcu. Cras bibendum lorem laoreet varius pretium. Vestibulum et dictum sapien. Integer accumsan magna sit amet dapibus egestas. Nullam non mauris sit amet lectus vehicula euismod. Nullam accumsan luctus ultricies. Sed sodales, dolor in ullamcorper consectetur, orci nibh sagittis felis, ac vestibulum risus quam ac metus. Pellentesque aliquam ligula eget magna rhoncus, vitae consequat leo pharetra. Nulla dapibus tempor quam, rhoncus lobortis lacus hendrerit ultricies. Donec et libero viverra, imperdiet justo eget, bibendum magna. Quisque et facilisis justo. Sed porttitor malesuada nunc at egestas. Integer sapien velit, mollis sit amet nunc malesuada, maximus fringilla urna. Cras id rhoncus magna, sit amet blandit nibh.

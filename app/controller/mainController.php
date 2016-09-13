@@ -9,12 +9,12 @@ if(isset($_COOKIE["theme"])) {
 			$theme = "light";
 			break;
 		default:
-			$theme = "default";
+			$theme = "light";
 			break;
 	}
 }
 else {
-	$theme = "default";
+	$theme = "light";
 	setcookie("theme", $theme);
 }
 
