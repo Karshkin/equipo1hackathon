@@ -76,6 +76,7 @@ function userRegister() {
 	}
 }
 
+/*
 function userActivate() {
 	$user = new User();
 	$user->activateUser($_GET["activationCode"], $_GET["userID"]);
@@ -86,5 +87,5 @@ function getProfileData($userID) {
 	$userData = "Datos Usuario";
 	return $userData;
 }
-
+*/
 ?>
