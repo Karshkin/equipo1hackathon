@@ -16,10 +16,10 @@ class User extends Database {
 		$email = mysqli_real_escape_string($this->conexion, $email);
 		$password = md5($password);
 
-		if($result = $this->query("SELECT id, username FROM users WHERE email='".$email."' and password='".$password."';")) {
+		if($result = $this->query("SELECT idUser, user_name FROM user WHERE email='".$email."' and password='".$password."';") && !is_null($result)) {
 			$result = mysqli_fetch_object($result);
-			$_SESSION["username"] = $result->username;
-			$_SESSION["userID"] = $result->id;
+			$_SESSION["username"] = $result->user_name;
+			$_SESSION["userID"] = $result->idUser;
 			return true;
 		}
 		else {
@@ -33,14 +33,8 @@ class User extends Database {
 		$password = md5($password);
 		$activationCode = md5($username.rand(0, 100));
 
-		if($this->query("INSERT INTO users(username, email, password) VALUES('".$username."', '".$email."', '".$password."');")) {
+		if($this->query("INSERT INTO user(user_name, email, password) VALUES('".$username."', '".$email."', '".$password."');")) {
 			$newUserId = mysqli_insert_id($this->conexion);
-			if($this->query("INSERT INTO users_emailconfirm(userId, activeCode) VALUES('".$newUserId."', '".$activationCode."');")) {
-				return $activationCode;
-			}
-			else {
-				return false;
-			}
 		}
 		else {
 			return false;

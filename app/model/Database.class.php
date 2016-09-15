@@ -6,7 +6,7 @@ abstract class Database {
 
 	public function __construct() {
 		if(!isset($this->conexion)) {
-			if($this->conexion = mysqli_connect("localhost", "root", "", "tellYourself")) {
+			if($this->conexion = mysqli_connect("localhost", "root", "", "mydb")) {
 				return true;
 			}
 			else {

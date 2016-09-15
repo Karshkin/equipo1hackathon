@@ -3,6 +3,7 @@ session_start();
 define("APP_NAME", "FlatPHP");
 require_once("app/controller/mainController.php");
 require_once("app/controller/usersController.php");
+require_once("app/controller/newsController.php");
 
 if(!empty($_GET)) {
 	if(isset($_GET["action"])) {
@@ -15,6 +16,9 @@ if(!empty($_GET)) {
 				break;
 			case "logout":
 				userLogout();
+				break;
+			case "new":
+				$articleData = getNews($_GET["newid"]);
 				break;
 			default:
 				//
@@ -29,6 +33,9 @@ if(!empty($_GET)) {
 				break;
 			case "register":
 				include_once("app/view/".$theme."/pages/register.php");
+				break;
+			case "new":
+				include_once("app/view/".$theme."/pages/new.php");
 				break;
 			default:
 				include_once("app/view/".$theme."/pages/404.php");
