@@ -19,9 +19,10 @@ if(isset($_SESSION["username"])) {
 		}
 		?>
 		<link rel="stylesheet" type="text/css" href="app/view/light/css/main.css">
+		<script src="app/view/light/js/main.js"></script>
 		<title><?php echo $pageTitle; ?></title>
 	</head>
-	<body>
+	<body onload = "startTimer()">
 		<nav class = "menu">
 			<ul>
 				<li><a href="index.php">App icon</a></li>
