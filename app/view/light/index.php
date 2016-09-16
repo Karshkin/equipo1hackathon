@@ -5,25 +5,13 @@ include_once("app/view/light/includes/header.php");
 
 			<div class = "roller">
 
-				<div class = "item" style = "display: none;">
-					
-					
-				</div>
-
-				<div class = "item" style = "display: none;">
-					
-					
-				</div>
-
 				<div class = "item">
 					<div class = "itemImage">
 						<img id = "img" src="https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG">
 						<button type="button" onclick="displayPreviousImage()">Previous</button>
        					<button type="button" onclick="displayNextImage()">Next</button>
 					</div>
-					<div class = "itemDescription">
-						sdghsdf
-					</div>
+					<div class = "itemDescription"></div>
 				</div>
 
 			</div>
@@ -41,32 +29,21 @@ include_once("app/view/light/includes/header.php");
 
 			<div class = "news">
 
-				<div class = "item">
-					<div class = "itemImage">
-						<img src="https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG">
-					</div>
-					<div class = "itemDescription">
-						Descripcion
-					</div>
-				</div>
+			<?php
+			for($i = 0; $i < sizeof($recentNews["id"]); $i++) {
+					echo '
+					<a href="?action=new&page=new&newid='.$recentNews["id"][$i].'"><div class = "item">
+						<div class = "itemImage">
+							<img src='.$recentNews["photo"][$i].'>
+						</div>
+						<div class = "itemDescription">
+							'.$recentNews["subtitle"][$i].'
+						</div>
+					</div></a>
+					';
+			}
+			?>
 
-				<div class = "item">
-					<div class = "itemImage">
-						<img src="https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG">
-					</div>
-					<div class = "itemDescription">
-						Descripcion
-					</div>
-				</div>
-
-				<div class = "item">
-					<div class = "itemImage">
-						<img src="https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG">
-					</div>
-					<div class = "itemDescription">
-						Descripcion
-					</div>
-				</div>
 			</div>
 
 <?php

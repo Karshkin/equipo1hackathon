@@ -21,7 +21,7 @@ if(!empty($_GET)) {
 				$articleData = getNews($_GET["newid"]);
 				break;
 			default:
-				//
+				include_once("app/view/".$theme."/pages/404.php");
 				break;
 		}
 	}
@@ -35,18 +35,16 @@ if(!empty($_GET)) {
 				include_once("app/view/".$theme."/pages/register.php");
 				break;
 			case "new":
-				include_once("app/view/".$theme."/pages/new.php");
+				include_once("app/view/".$theme."/pages/news.php");
 				break;
 			default:
 				include_once("app/view/".$theme."/pages/404.php");
 				break;
 		}
 	}
-	else {
-		include_once("app/view/".$theme."/index.php");
-	}
 }
 else {
+	$recentNews = recentNews();
 	include_once("app/view/".$theme."/index.php");
 }
 

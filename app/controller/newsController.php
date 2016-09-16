@@ -6,4 +6,9 @@ function getNews($id) {
 	return $news->getNews($id);
 }
 
+function recentNews() {
+	$news = new News();
+	return $news->recentNews();
+}
+
 ?>

@@ -21,7 +21,25 @@ class News extends Database {
 									FROM news n, category c, news_has_category nc 
 									WHERE c.idcategory=nc.category_idcategory AND nc.news_idNew=n.idNew AND n.idNew='".$id."';")) {
 			$result = mysqli_fetch_object($result);
-			return array($result->idNew, $result->title, $result->subtitle, $result->description, $result->date, $result->photo, $result->name);
+			return array("id" => $result->idNew, "title" => $result->title, "subtitle" => $result->subtitle, "description" => $result->description, "date" =>$result->date, "photo" => $result->photo, "category" => $result->name);
+		}
+		else {
+			return false;
+		}
+	}
+
+	public function recentNews() {
+		if($result = $this->query("SELECT n.date, n.title, n.subtitle, n.photo, n.idNew
+									FROM news n
+									ORDER BY n.date DESC limit 3")) {
+			while($row = mysqli_fetch_array($result)) {
+				$date[] = $row["date"];
+				$title[] = $row["title"];
+				$subtitle[] = $row["subtitle"];
+				$photo[] = $row["photo"];
+				$id[] = $row["idNew"];
+			}
+			return array("date" => $date, "title" => $title, "subtitle" => $subtitle, "photo" => $photo, "id" => $id);
 		}
 		else {
 			return false;

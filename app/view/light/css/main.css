@@ -1,6 +1,6 @@
 :root {
-	--mainColor: #00B3B3;
-	--secondColor: #008888;
+	--mainColor: #ffff66;
+	--secondColor: #0066ff;
 	--thirdColor: #006A6A;
 }
 
@@ -106,6 +106,7 @@ body {
 }
 
 .pageContainer > div {
+	clear: both;
 	margin-bottom: 1%;
 }
 
@@ -127,7 +128,6 @@ body {
 /**********INDEX PAGE**********/
 
 .roller {
-	float: left;
 	width: 100%;
 	height: 200px;
 	background-color: var(--thirdColor);
@@ -147,7 +147,7 @@ body {
 }
 
 .roller > .item > .itemDescription {
-	float: inherit;
+	
 }
 
 
@@ -162,7 +162,7 @@ body {
 }
 
 .item {
-	overflow: auto;
+	height: 175px;
 	margin-bottom: 1%;
 	background-color: var(--thirdColor);
 }
@@ -170,7 +170,6 @@ body {
 .itemImage {
 	width: 175px;
 	float: left;
-	background-color: var(--mainColor);
 }
 
 .itemImage img {
