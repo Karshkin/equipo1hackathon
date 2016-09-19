@@ -49,5 +49,5 @@ if(!empty($_GET)) {
 else {
 	include_once("app/view/".$theme."/index.php");
 }
-
+//administrador.1
 ?>

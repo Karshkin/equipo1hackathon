@@ -16,7 +16,7 @@ class User extends Database {
 		$email = mysqli_real_escape_string($this->conexion, $email);
 		$password = md5($password);
 
-		if($result = $this->query("SELECT idUser, user_name FROM user WHERE email='".$email."' and password='".$password."';") && !is_null($result)) {
+		if($result = $this->query("SELECT idUser, user_name FROM user WHERE email='".$email."' and password='".$password."';")) {
 			$result = mysqli_fetch_object($result);
 			$_SESSION["username"] = $result->user_name;
 			$_SESSION["userID"] = $result->idUser;

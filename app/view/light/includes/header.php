@@ -22,7 +22,7 @@ if(isset($_SESSION["username"])) {
 		<script src="app/view/light/js/main.js"></script>
 		<title><?php echo $pageTitle; ?></title>
 	</head>
-	<body onload = "startTimer()">
+	<body>
 		<nav class = "menu">
 			<ul>
 				<li><a href="index.php">App icon</a></li>
