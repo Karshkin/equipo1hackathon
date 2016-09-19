@@ -11,4 +11,9 @@ function recentNews() {
 	return $news->recentNews();
 }
 
+function newsCategory($category) {
+	$news = new News();
+	return $news->newsCategory($category);
+}
+
 ?>

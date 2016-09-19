@@ -42,9 +42,11 @@ if(!empty($_GET)) {
 				break;
 		}
 	}
+	else {
+		include_once("app/view/".$theme."/index.php");
+	}
 }
 else {
-	$recentNews = recentNews();
 	include_once("app/view/".$theme."/index.php");
 }
 
