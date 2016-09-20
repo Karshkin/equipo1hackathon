@@ -7,6 +7,7 @@ abstract class Database {
 	public function __construct() {
 		if(!isset($this->conexion)) {
 			if($this->conexion = mysqli_connect("54.68.253.236", "admin", "administrador.1", "mydb")) {
+			//if($this->conexion = mysqli_connect("localhost", "root", "", "mydb")) {
 				mysqli_set_charset($this->conexion, "utf8");
 				return true;
 			}

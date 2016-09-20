@@ -25,7 +25,7 @@ if(isset($_SESSION["username"])) {
 	<body>
 		<nav class = "menu">
 			<ul>
-				<li><a href="index.php">App icon</a></li>
+				<li><a href="index.php"><img src="app/view/light/img/mk.png"></a></li>
 				<?php echo ((isset($_GET["page"])) && (($_GET["page"] == "new")) ? '<label>'.$newsTitle.'</label>' : '') ?>
 				<li<?php echo ' class = "userMenu'.((isset($_GET["page"])) && (($_GET["page"] == "login") || ($_GET["page"] == "profile")) ? ' activeTab"' : '"'); ?>><?php echo $userNav; ?><li>
 			</ul>
